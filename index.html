@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Learning World</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#fff8e7;color:#333}
+header{background:linear-gradient(135deg,#6c63ff,#48c6ef);color:white;text-align:center;padding:35px 15px}
+header h1{font-size:42px;margin:5px 0 15px}
+header p{font-size:18px;line-height:1.6}
+nav{margin-top:25px}
+nav a{display:inline-block;padding:10px 15px;margin:5px;border-radius:25px;background:#ffffff33;color:white;text-decoration:none;font-weight:bold}
+nav a:hover{background:white;color:#6c63ff}
+main{width:90%;max-width:1100px;margin:auto}
+section{background:white;margin:30px 0;padding:30px;border-radius:22px;box-shadow:0 5px 20px #00000014}
+h2{text-align:center;color:#6c63ff;margin-bottom:25px}
+h3{color:#ff7043}
+p{line-height:1.6}
+
+.hero{text-align:center}
+.hero h2{font-size:30px}
+.learning-image{
+width:100%;max-width:750px;height:400px;object-fit:cover;
+border-radius:25px;border:6px solid #ffd166;
+display:block;margin:auto;transition:.3s
+}
+.learning-image:hover{
+transform:scale(1.02);box-shadow:0 10px 25px #0003
+}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#f3f8ff;padding:20px;border-radius:18px;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-7px);box-shadow:0 10px 20px #0002}
+.icon{font-size:55px;padding:25px;background:#eaf4ff;border-radius:15px}
+.card h3{margin:15px 0}
+
+.list-box{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.subjects,.activities{padding:25px;border-radius:18px}
+.subjects{background:#fff0f5}
+.activities{background:#effff4}
+li{margin:10px 0}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{color:white;text-align:center;padding:20px;border-radius:18px}
+.step:nth-child(1){background:#ff6b6b}
+.step:nth-child(2){background:#4dabf7}
+.step:nth-child(3){background:#51cf66}
+.step:nth-child(4){background:#845ef7}
+
+table{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden}
+th{background:#6c63ff;color:white;padding:14px}
+td{padding:13px;text-align:center;border:1px solid #ddd}
+tr:nth-child(even){background:#f3f7ff}
+tr:hover{background:#fff1b8}
+
+.habits{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.habit{background:#e8f8f5;padding:18px 10px;border-radius:15px;text-align:center;font-weight:bold}
+.habit:hover{background:#d0f5e8}
+
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.fact{background:#fff8d6;padding:18px;border-left:6px solid #ffd166;border-radius:12px}
+
+.quiz{background:#f3eaff}
+.question{background:white;padding:15px;margin:12px 0;border-radius:12px}
+
+.contact{text-align:center;background:linear-gradient(135deg,#fff0f5,#e8f8ff)}
+.contact a{color:#6c63ff;font-weight:bold;text-decoration:none}
+
+footer{text-align:center;background:#343a40;color:white;padding:25px}
+footer a{color:#ffd166;text-decoration:none}
+
+@media(max-width:800px){
+header h1{font-size:32px}
+.cards,.steps{grid-template-columns:repeat(2,1fr)}
+.habits{grid-template-columns:repeat(2,1fr)}
+.list-box,.facts{grid-template-columns:1fr}
+}
+@media(max-width:550px){
+main{width:94%}
+section{padding:20px 15px}
+.cards,.steps,.habits{grid-template-columns:1fr}
+header h1{font-size:27px}
+nav a{display:block;max-width:230px;margin:7px auto}
+table{font-size:13px}
+.learning-image{height:250px}
+}
+</style>
+</head>
+
+<body>
+
+<header id="top">
+<h1>🧸 Kids Learning World 🧸</h1>
+<p>🌈 Learn • Play • Explore • Grow 🌈</p>
+<p>
+Welcome to <b>Kids Learning World!</b><br>
+Learn Alphabets, Numbers, Colors, Animals and Good Habits
+in a fun way.
+</p>
+
+<nav>
+<a href="#subjects">📚 Subjects</a>
+<a href="#learning">🎓 Learning</a>
+<a href="#schedule">📅 Schedule</a>
+<a href="#habits">🌟 Good Habits</a>
+<a href="#animals">🐶 Animals</a>
+<a href="#facts">💡 Fun Facts</a>
+<a href="#contact">📞 Contact</a>
+</nav>
+</header>
+
+<main>
+
+<!-- CLICKABLE IMAGE -->
+<section class="hero">
+<h2>🌟 Welcome Little Learners! 🌟</h2>
+
+<a href="https://www.education.com/" target="_blank">
+<img src="https://th.bing.com/th/id/OIP.sEkB-b410zqLBDH9llVnsQHaFs?w=234&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+alt="Kids learning together"
+class="learning-image">
+</a>
+
+<p>📖 Learning is an adventure! Discover something new every day.</p>
+<p><b>👆 Click the picture to visit a kids learning website!</b></p>
+</section>
+
+<!-- SUBJECTS -->
+<section id="subjects">
+<h2>📚 Learning Subjects</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🔤</div>
+<h3>Alphabets</h3>
+<p>Learn A to Z, capital letters, small letters and sounds.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔢</div>
+<h3>Numbers</h3>
+<p>Practice counting, addition, subtraction and number names.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎨</div>
+<h3>Colors</h3>
+<p>Discover beautiful colors and learn color matching.</p>
+</div>
+
+<div class="card">
+<div class="icon">🐶</div>
+<h3>Animals</h3>
+<p>Learn about pets, wild animals, birds and sea animals.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎵</div>
+<h3>Rhymes</h3>
+<p>Sing fun rhymes and action songs with friends.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌟</div>
+<h3>Good Habits</h3>
+<p>Learn how to stay healthy, kind and responsible.</p>
+</div>
+
+</div>
+</section>
+
+<!-- LISTS -->
+<section>
+<h2>🎨 Subjects & Fun Activities</h2>
+
+<div class="list-box">
+
+<div class="subjects">
+<h3>📚 Subjects Include</h3>
+<ol>
+<li>Alphabet
+<ol>
+<li>Capital Letters</li>
+<li>Small Letters</li>
+<li>Letter Sounds</li>
+<li>Word Building</li>
+</ol>
+</li>
+<li>Numbers
+<ol>
+<li>Counting</li>
+<li>Addition</li>
+<li>Subtraction</li>
+</ol>
+</li>
+<li>Colors</li>
+<li>Animals</li>
+<li>Good Habits</li>
+</ol>
+</div>
+
+<div class="activities">
+<h3>🎉 Fun Activities</h3>
+<ul>
+<li>🎨 Drawing Animals</li>
+<li>🌸 Drawing Flowers</li>
+<li>🎵 Singing Rhymes</li>
+<li>🎤 Action Songs</li>
+<li>🧩 Puzzles</li>
+<li>🖍️ Coloring</li>
+<li>📖 Storytelling</li>
+<li>🎲 Educational Games</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- LEARNING PATH -->
+<section id="learning">
+<h2>🎓 My Learning Path</h2>
+<p style="text-align:center">
+Follow these simple steps and become a super learner!
+</p>
+
+<div class="steps">
+<div class="step"><h3>1️⃣ Learn</h3><p>Discover new letters, numbers and words.</p></div>
+<div class="step"><h3>2️⃣ Practice</h3><p>Practice writing and solving puzzles.</p></div>
+<div class="step"><h3>3️⃣ Play</h3><p>Play educational games and have fun.</p></div>
+<div class="step"><h3>4️⃣ Share</h3><p>Share what you learned with others.</p></div>
+</div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+<h2>📅 Weekly Learning Schedule</h2>
+
+<table>
+<tr><th>Day</th><th>Subject</th><th>Activity</th></tr>
+<tr><td>Monday</td><td>🔤 Alphabet</td><td>Letter Writing</td></tr>
+<tr><td>Tuesday</td><td>🔢 Numbers</td><td>Counting Games</td></tr>
+<tr><td>Wednesday</td><td>🎨 Colors</td><td>Color Matching</td></tr>
+<tr><td>Thursday</td><td>🐶 Animals</td><td>Animal Quiz</td></tr>
+<tr><td>Friday</td><td>🎵 Rhymes</td><td>Singing Practice</td></tr>
+<tr><td>Saturday</td><td>🖍️ Drawing</td><td>Creative Drawing</td></tr>
+</table>
+</section>
+
+<!-- HABITS -->
+<section id="habits">
+<h2>🌟 Good Habits for Kids</h2>
+<p style="text-align:center">
+Good habits help us become healthy, happy and responsible.
+</p>
+
+<div class="habits">
+<div class="habit">🪥<br>Brush Teeth</div>
+<div class="habit">🧼<br>Wash Hands</div>
+<div class="habit">🥗<br>Eat Healthy</div>
+<div class="habit">💧<br>Drink Water</div>
+<div class="habit">😴<br>Sleep on Time</div>
+<div class="habit">📚<br>Read Books</div>
+<div class="habit">🧸<br>Keep Toys Clean</div>
+<div class="habit">🙏<br>Say Thank You</div>
+<div class="habit">❤️<br>Help Others</div>
+<div class="habit">🌳<br>Keep Earth Clean</div>
+</div>
+</section>
+
+<!-- ANIMALS -->
+<section id="animals">
+<h2>🐾 Amazing Animals</h2>
+
+<table>
+<tr><th>Animal</th><th>Home</th><th>Special Feature</th></tr>
+<tr><td>🦁 Lion</td><td>Grassland</td><td>King of the Jungle</td></tr>
+<tr><td>🐘 Elephant</td><td>Forest</td><td>Has a long trunk</td></tr>
+<tr><td>🐬 Dolphin</td><td>Ocean</td><td>Very intelligent</td></tr>
+<tr><td>🐧 Penguin</td><td>Cold Regions</td><td>Can swim very well</td></tr>
+<tr><td>🦒 Giraffe</td><td>Grassland</td><td>Has a very long neck</td></tr>
+</table>
+</section>
+<!-- FUN FACTS -->
+<section id="facts">
+<h2>💡 Fun Facts for Kids</h2>
+<div class="facts">
+<div class="fact">🌈 A rainbow has seven main colors.</div>
+<div class="fact">🐘 Elephants use their trunks to drink water.</div>
+<div class="fact">🦋 Butterflies taste with their feet.</div>
+<div class="fact">🐝 Bees make honey from flower nectar.</div>
+<div class="fact">🌙 The Moon goes around the Earth.</div>
+<div class="fact">☀️ The Sun gives us light and heat.</div>
+<div class="fact">🐟 Fish use gills to breathe underwater.</div>
+<div class="fact">🌱 Plants need sunlight and water to grow.</div>
+</div>
+</section>
+<!-- QUIZ -->
+<section class="quiz">
+<h2>🧠 Mini Kids Quiz</h2>
+<div class="question">
+<b>1. How many days are there in a week?</b>
+<p>Answer: 7️⃣</p>
+</div>
+<div class="question">
+<b>2. What color is the sky on a clear day?</b>
+<p>Answer: 🔵 Blue</p>
+</div>
+<div class="question">
+<b>3. Which animal says "Moo"?</b>
+<p>Answer: 🐄 Cow</p>
+</div>
+<div class="question">
+<b>4. How many legs does a dog have?</b>
+<p>Answer: 🐶 Four</p>
+</div>
+<div class="question">
+<b>5. What comes after number 9?</b>
+<p>Answer: 🔟 10</p>
+</div>
+</section>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>📞 Contact Us</h2>
+<p>Have questions? We would love to hear from you!</p>
+<p>
+📧 <a href="mailto:kidslearning@example.com">
+kidslearning@example.com
+</a>
+</p>
+<p>
+📱 <a href="tel:+919342092448">
++91 9342092448
+</a>
+</p>
+<p>👨‍🏫 Talk to your teacher or parents whenever you need help.</p>
+</section>
+</main>
+<footer>
+<h2 style="color:#ffd166">
+🎉 Thank You for Visiting Kids Learning World! 🎉
+</h2>
+<p>Keep Learning • Keep Smiling • Keep Exploring 🌈</p>
+<a href="#top">⬆️ Back to Top</a>
+</footer>
+</body>
+</html>
