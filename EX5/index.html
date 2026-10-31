@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kids Learning World</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            background: linear-gradient(135deg, #89e5ff, #d9c6ff, #fff1a8);
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #ff8ac5, #ffca70);
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px solid white;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: white;
+            margin: 5px;
+            text-shadow: 2px 3px 4px #777;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #713c87;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        nav {
+            background: #8065dc;
+            padding: 14px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffe66d;
+        }
+
+        /* Welcome section */
+        .welcome {
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        .welcome h2 {
+            color: #6936b5;
+            font-size: 30px;
+        }
+
+        .welcome p {
+            font-size: 17px;
+        }
+
+        /* Learning cards */
+        .subjects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        .card {
+            width: 180px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 5px 12px #aaa;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card span {
+            font-size: 45px;
+        }
+
+        .card h3 {
+            color: #7144c5;
+        }
+
+        /* Registration form */
+        .container {
+            width: 400px;
+            max-width: 92%;
+            margin: 35px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px #aaa;
+            text-align: center;
+            border: 4px solid #ffb7d9;
+        }
+
+        .container h2 {
+            color: #f05b9d;
+            font-size: 25px;
+        }
+
+        .container p {
+            color: #777;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin: 8px 0;
+            border: 2px solid #c9b8f5;
+            border-radius: 12px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #ff8ac5;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            display: block;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(to right, #ff78b7, #9165ef);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.04);
+            background: #7044cb;
+        }
+
+        #success {
+            color: green;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #8065dc;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 500px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 6px;
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>🌈 Kids Learning World 🎈</h1>
+    <p>Learn • Play • Explore • Grow!</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#register">Register</a>
+</nav>
+
+<!-- Welcome Section -->
+<section class="welcome" id="home">
+
+    <h2>Welcome Little Champions! ⭐</h2>
+
+    <p>
+        Learning is fun when we learn together!
+        Explore new things and enjoy every day.
+    </p>
+
+</section>
+
+<!-- Learning Subjects -->
+<section class="subjects" id="subjects">
+
+    <div class="card">
+        <span>🔤</span>
+        <h3>Alphabets</h3>
+        <p>Learn ABC easily!</p>
+    </div>
+
+    <div class="card">
+        <span>🔢</span>
+        <h3>Numbers</h3>
+        <p>Enjoy counting!</p>
+    </div>
+
+    <div class="card">
+        <span>🔬</span>
+        <h3>Science</h3>
+        <p>Discover new things!</p>
+    </div>
+
+    <div class="card">
+        <span>🎨</span>
+        <h3>Drawing</h3>
+        <p>Show your creativity!</p>
+    </div>
+
+</section>
+
+<!-- Registration Form -->
+<div class="container" id="register">
+
+    <h2>🎓 Join Our Learning Family!</h2>
+
+    <p>Create your account and start learning!</p>
+
+    <form id="signupForm">
+
+        <input type="text" id="name"
+        placeholder="👦 Child's Name">
+
+        <span class="error" id="nameError"></span>
+
+        <input type="email" id="email"
+        placeholder="📧 Parent's Email">
+
+        <span class="error" id="emailError"></span>
+
+        <input type="number" id="age"
+        placeholder="🎂 Child's Age">
+
+        <span class="error" id="ageError"></span>
+
+        <input type="password" id="password"
+        placeholder="🔒 Create Password">
+
+        <span class="error" id="passError"></span>
+
+        <input type="password" id="confirm"
+        placeholder="🔑 Confirm Password">
+
+        <span class="error" id="confirmError"></span>
+
+        <button type="submit">
+            Start Learning 🚀
+        </button>
+
+    </form>
+
+    <p id="success"></p>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <h3>🌟 Kids Learning World 🌟</h3>
+    <p>Making Learning Fun and Easy!</p>
+    <p>© 2026 Kids Learning Website</p>
+</footer>
+
+
+<!-- JavaScript Form Validation -->
+<script>
+
+    const form = document.getElementById("signupForm");
+
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const ageInput = document.getElementById("age");
+    const passwordInput = document.getElementById("password");
+    const confirmInput = document.getElementById("confirm");
+
+
+    // Function to check empty values
+    function isEmpty(value) {
+        return value.trim() === "";
+    }
+
+
+    // Function to validate email
+    function isValidEmail(email) {
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return pattern.test(email);
+    }
+
+
+    // Function to validate password
+    function isStrongPassword(password) {
+        return password.length >= 8;
+    }
+
+
+    // Function to display errors
+    function showError(id, message) {
+        document.getElementById(id).textContent = message;
+    }
+
+
+    // Function to clear errors
+    function clearErrors() {
+
+        document.querySelectorAll(".error").forEach(function(error) {
+            error.textContent = "";
+        });
+
+        document.getElementById("success").textContent = "";
+    }
+
+
+    // Main validation function
+    function validateForm() {
+
+        let valid = true;
+
+        clearErrors();
+
+
+        // Name validation
+        if (isEmpty(nameInput.value)) {
+
+            showError("nameError", "Name is required");
+            valid = false;
+
+        }
+        else if (nameInput.value.trim().length < 3) {
+
+            showError("nameError", "Enter at least 3 characters");
+            valid = false;
+
+        }
+
+
+        // Email validation
+        if (!isValidEmail(emailInput.value.trim())) {
+
+            showError("emailError", "Enter a valid email");
+            valid = false;
+
+        }
+
+
+        // Age validation
+        let age = Number(ageInput.value);
+
+        if (isEmpty(ageInput.value)) {
+
+            showError("ageError", "Age is required");
+            valid = false;
+
+        }
+        else if (!Number.isInteger(age) || age < 3 || age > 18) {
+
+            showError("ageError", "Age must be between 3 and 18");
+            valid = false;
+
+        }
+
+
+        // Password validation
+        if (!isStrongPassword(passwordInput.value)) {
+
+            showError("passError", "Minimum 8 characters required");
+            valid = false;
+
+        }
+
+
+        // Confirm password validation
+        if (isEmpty(confirmInput.value) ||
+            confirmInput.value !== passwordInput.value) {
+
+            showError("confirmError", "Passwords do not match");
+            valid = false;
+
+        }
+
+        return valid;
+
+    }
+
+
+    // Form submission
+    form.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        if (!validateForm()) {
+
+            // Display validation errors
+
+        }
+        else {
+
+            document.getElementById("success").textContent =
+            "🎉 Registration Successful! Happy Learning!";
+
+            form.reset();
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
